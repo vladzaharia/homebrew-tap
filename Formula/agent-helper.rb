@@ -1,13 +1,13 @@
 class AgentHelper < Formula
   desc "Unified AI coding agent dispatcher"
   homepage "https://github.com/vladzaharia/dotfiles-helpers"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.1.0/agent-helper_darwin_arm64.tar.gz"
-      sha256 "6b0096fabb537c4d2f0fadd8223ff214557e4406f13875c30bca2d94644cb5b2"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.2.0/agent-helper_darwin_arm64.tar.gz"
+      sha256 "9720bc2c39d48ef6cf553d154d19f609ec7a61040dda4cb9948bc004ebba73cd"
     end
   end
 

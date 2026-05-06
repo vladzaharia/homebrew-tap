@@ -5,12 +5,12 @@
 class SopsHelper < Formula
   desc "SOPS encryption/decryption CLI with glob support"
   homepage "https://github.com/vladzaharia/dotfiles-helpers"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/sops-helper_darwin_amd64.tar.gz"
-      sha256 "e6494523592e233be732ddabc0eefe1d6b9cfd7d9c51b6fe441801d834a8e2bd"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/sops-helper_darwin_amd64.tar.gz"
+      sha256 "bd2fc7f6c1ad5f0a02b06377573431d3f7c467c9f9854b0ec51c8c5edea4e2af"
 
       define_method(:install) do
         bin.install "sops-helper"
@@ -18,8 +18,8 @@ class SopsHelper < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/sops-helper_darwin_arm64.tar.gz"
-      sha256 "53e917f6a73800b97ba27dc588d38f710413a949eb7c31b053fe6f9866c866c2"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/sops-helper_darwin_arm64.tar.gz"
+      sha256 "606ef48a2243d8edf82f96624916226314585530d81cea9ac316ec086cb6c537"
 
       define_method(:install) do
         bin.install "sops-helper"
@@ -30,16 +30,16 @@ class SopsHelper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/sops-helper_linux_amd64.tar.gz"
-      sha256 "58f506060a33c362f051e47179e5f8f2a3d5ae578150361eff52e15f82e27ae7"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/sops-helper_linux_amd64.tar.gz"
+      sha256 "94d702e36560baa2720af9ca70ef1900f0cca20980d1ff520568def56219b777"
       define_method(:install) do
         bin.install "sops-helper"
         bin.install_symlink "sops-helper" => "crypto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/sops-helper_linux_arm64.tar.gz"
-      sha256 "96b59133eb5829aba1a8db3d685cd5447794f118aac02b85b65f0beb7d402c81"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/sops-helper_linux_arm64.tar.gz"
+      sha256 "2c64eb3b1f620c317138ef77b8b10e4177e5426a4eb56fa2c2fa4c795f121a27"
       define_method(:install) do
         bin.install "sops-helper"
         bin.install_symlink "sops-helper" => "crypto"

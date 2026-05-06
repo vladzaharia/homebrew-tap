@@ -5,12 +5,12 @@
 class VaultHelper < Formula
   desc "HashiCorp Vault CLI helper (SSH certs, TOTP, env injection)"
   homepage "https://github.com/vladzaharia/dotfiles-helpers"
-  version "0.5.0"
+  version "0.5.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/vault-helper_darwin_amd64.tar.gz"
-      sha256 "2beeabfcd81f654ee9b5b17a80038940173e67b0d5188389d7811964be563a8e"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/vault-helper_darwin_amd64.tar.gz"
+      sha256 "d6bc14235e7a95c7ade9ea34e0b17caac2baffb424b3f8f615254fd582c17131"
 
       define_method(:install) do
         bin.install "vault-helper"
@@ -20,8 +20,8 @@ class VaultHelper < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/vault-helper_darwin_arm64.tar.gz"
-      sha256 "aeeb9a3673125045ab69db35d9a24e860bc270e089146f5da3184032b651ba3d"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/vault-helper_darwin_arm64.tar.gz"
+      sha256 "c66c2f9ee7228fedbb7b99c5b5e4f5ffad798da001fc8a40feba4faf63d8edd3"
 
       define_method(:install) do
         bin.install "vault-helper"
@@ -34,8 +34,8 @@ class VaultHelper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/vault-helper_linux_amd64.tar.gz"
-      sha256 "d884879ca339616f6f1b678feb8aeeefcb34be7e02aff8b5ace89a64d0aabf9f"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/vault-helper_linux_amd64.tar.gz"
+      sha256 "d709c0777488b29555b4bbe21549874c5247c5850296ced1c5c784882fdd5d9b"
       define_method(:install) do
         bin.install "vault-helper"
         %w[vh vlogin vssh vmosh votp vtoken vnv vdocker].each do |name|
@@ -44,8 +44,8 @@ class VaultHelper < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.0/vault-helper_linux_arm64.tar.gz"
-      sha256 "a40552746fb705d441074b5c43c0e2481fc642ae7ff57c1738c1812152f1588c"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/vault-helper_linux_arm64.tar.gz"
+      sha256 "208b819651f5242cb913d8e25338310967876147fac5ccd5fb7231c95b9f7e4b"
       define_method(:install) do
         bin.install "vault-helper"
         %w[vh vlogin vssh vmosh votp vtoken vnv vdocker].each do |name|

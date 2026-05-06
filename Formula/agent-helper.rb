@@ -5,12 +5,12 @@
 class AgentHelper < Formula
   desc "Unified AI coding agent dispatcher"
   homepage "https://github.com/vladzaharia/dotfiles-helpers"
-  version "0.5.1"
+  version "0.5.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/agent-helper_darwin_amd64.tar.gz"
-      sha256 "b7f71999677dd8f3d621e177ea879064990d4d09813e71ce6fcfcf24f24de3fd"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.2/agent-helper_darwin_amd64.tar.gz"
+      sha256 "20a448031e1cf2adc6a2b4a3503fa82aa4bfed4381ae3f10124e53e845557b5c"
 
       define_method(:install) do
         bin.install "agent-helper"
@@ -18,8 +18,8 @@ class AgentHelper < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/agent-helper_darwin_arm64.tar.gz"
-      sha256 "3102391aa45bb68523896534b1d87b49c0d0304e14e17de312dc731a0274afb9"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.2/agent-helper_darwin_arm64.tar.gz"
+      sha256 "4c83c37277b8c1cdad5c9afc7178f478b2a12f37b24174970fe114f89af7af3a"
 
       define_method(:install) do
         bin.install "agent-helper"
@@ -30,16 +30,16 @@ class AgentHelper < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/agent-helper_linux_amd64.tar.gz"
-      sha256 "b466a3268a48f942a3c57cd84db6b1c6babbdfcb0cebe799ab7a3b32984735ea"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.2/agent-helper_linux_amd64.tar.gz"
+      sha256 "85f537b010e070409c27c80a8bb24899ec09f479da0c4900db37369235d03562"
       define_method(:install) do
         bin.install "agent-helper"
         bin.install_symlink "agent-helper" => "ag"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.1/agent-helper_linux_arm64.tar.gz"
-      sha256 "994fe035b89da4d479c8ad8f7945b39d256c20b8cfe4440398d82bab5f4494ec"
+      url "https://github.com/vladzaharia/dotfiles-helpers/releases/download/v0.5.2/agent-helper_linux_arm64.tar.gz"
+      sha256 "89ab8deb71c70968d1d6e3d59563e21fb5a6296385cb79e200f8d5299c005f86"
       define_method(:install) do
         bin.install "agent-helper"
         bin.install_symlink "agent-helper" => "ag"
